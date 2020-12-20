@@ -8,7 +8,6 @@ Vagrant.configure("2") do |config|
     ow.vm.box = "owaspwebgoat/training"
     ow.vm.network "private_network", ip: "172.16.20.10",
       virtualbox__intnet: true
-    ow.vbguest.auto_update = false
     ow.vm.provider "virtualbox" do |vb|
       vb.gui = false
       vb.cpus = 1
@@ -21,7 +20,6 @@ Vagrant.configure("2") do |config|
     dvwa.vm.box = "mmckinst/dvwa"
     dvwa.vm.network "private_network", ip: "172.16.20.20",
       virtualbox__intnet: true
-    dvwa.vbguest.auto_update = false
     dvwa.vm.provider "virtualbox" do |vb|
       vb.gui = false
       vb.cpus = 1
@@ -34,7 +32,6 @@ Vagrant.configure("2") do |config|
     msf.vm.box = "rapid7/metasploitable3-win2k8"
     msf.vm.network "private_network", ip: "172.16.20.30",
       virtualbox__intnet: true
-    msf.vbguest.auto_update = false
     msf.vm.provider "virtualbox" do |vb|
       vb.gui = false
       vb.cpus = 2
